@@ -1,0 +1,8 @@
+/* The header styles  */
+.header_content {
+    text-align : center ; 
+}
+
+h1 , p {
+    color: white;
+}

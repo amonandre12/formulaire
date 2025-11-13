@@ -35,12 +35,14 @@ function FormContact() {
   
 
    return (
-      <form>
+    <div className="form_section">
+      <form className="contact_form">
 
       <Header text = 'Welcome to our app '/>
-        <div>
-      <label for = 'name'className='label_styles'>Name:</label> <br/>
 
+        <div className="form_group">
+          
+        <label htmlFor="name">Name</label>
       <input 
       value={userName}
       type='text'
@@ -50,9 +52,9 @@ function FormContact() {
       />
        </div>
 
-      <div>
-      <label for = 'name' className='label_styles'>Email:</label> <br/>
+      <div className="form_group">
 
+       <label htmlFor="email">Email</label>
       <input 
       value={userEmail}
       type='email'
@@ -62,9 +64,10 @@ function FormContact() {
       />
        </div>
 
-        <div>
-      <label for = 'name'>Password:</label> <br/>
+       <div className="form_group">
 
+      
+       <label htmlFor="password">Password</label>
       <input 
       value={userPassword}
       type= 'password' 
@@ -74,17 +77,13 @@ function FormContact() {
       />
        </div>
 
-       <button className='btn' onClick={onSubmitForm}>S'inscrire</button>
+       <button className='btn_send' onClick={onSubmitForm}>S'inscrire</button>
 
        
       {color && <p style={{color : color} }>{message}</p>}
       </form> 
-
+    </div>
    )
   
 }
 export default FormContact
-
-
-
-
